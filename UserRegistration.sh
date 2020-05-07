@@ -26,9 +26,17 @@ then
 else
         echo Invalid
 fi
-read -p "Eter Mobile Number(country code<space>10digit number : " mobileNumber
+read -p "Enter Mobile Number(country code<space>10digit number : " mobileNumber
 mobileNumberPattern="^[0-9]{1,4} [1-9][0-9]{9}$"
 if [[ $mobileNumber =~ $mobileNumberPattern ]]
+then
+        echo Valid
+else
+        echo Invalid
+fi
+read -p "Enter password : " password
+passwordPattern="^.{8,}$"
+if [[ $passsword =~ $passwordPattern ]]
 then
         echo Valid
 else
